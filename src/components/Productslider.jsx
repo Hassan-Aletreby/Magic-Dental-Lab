@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import Product1 from "../assets/imgs/slider23.jpg";
 import Product2 from "../assets/imgs/slider24.jpg";
 import Product3 from "../assets/imgs/slider22.jpeg";
@@ -19,6 +20,7 @@ const Products = [
 ];
 
 function Productslider() {
+  const { t } = useTranslation(); // هنا بنستخدم الترجمة
   const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
@@ -33,11 +35,10 @@ function Productslider() {
     <div className="container mx-auto py-16">
       <section className="flex flex-col lg:flex-row justify-between items-center">
         <div className="w-full lg:w-1/2 text-center lg:text-right px-8 text-white mb-8 lg:mb-0">
-          <h2 className="text-5xl font-bold mb-4">ابتسامتك أولويتنا</h2>
-          <p className="text-xl">
-            نحن نقدم زراعة الأسنان عالية الجودة والتركيبات المتقدمة لضمان راحة
-            المريض وتحقيق نتائج دائمة وجميلة.
-          </p>
+          <h2 className="text-5xl font-bold mb-4">
+            {t("product_slider_title")}
+          </h2>
+          <p className="text-xl">{t("product_slider_description")}</p>
         </div>
 
         <div className="relative w-full lg:w-1/2 h-[500px] overflow-hidden">

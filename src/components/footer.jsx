@@ -5,8 +5,11 @@ import {
   FaEnvelope,
   FaTiktok,
 } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
 
 function Footer() {
+  const { t } = useTranslation();
+
   return (
     <footer className="bg-black text-white border-t-1 border-gray-500 py-4">
       <div className="container mx-auto px-4">
@@ -27,21 +30,19 @@ function Footer() {
               </div>
             </a>
             <div className="flex items-center justify-center gap-6">
-              <p className="text-lg ">د. أنس فوزى</p>
-              <p className="text-lg ">د. أحمد سامح</p>
+              <p className="text-lg ">{t("Anas_Fawzy")}</p>
+              <p className="text-lg ">{t("Ahmed_Sameh")}</p>
             </div>
           </div>
 
           <div className="flex flex-col items-center">
-            <p className="text-lg mb-3">
-              العنوان : المنصورة - طلخا - شارع صلاح سالم
-            </p>
+            <p className="text-lg mb-3">{t("footer_address")}</p>
             <a
-              href="mailto:magicdentallab54@gmail.com"
+              href={`mailto:${t("footer_email")}`}
               className="text-gray-400 hover:text-white mb-3 flex items-center justify-center gap-2"
             >
               <FaEnvelope size={20} className="inline-block mr-2" />
-              magicdentallab54@gmail.com
+              {t("footer_email")}
             </a>
             <div className="flex items-center justify-center gap-6">
               <a
@@ -49,14 +50,14 @@ function Footer() {
                 className="text-gray-400 hover:text-white flex items-center justify-center gap-2"
               >
                 <FaPhoneAlt size={20} />
-                <span dir="ltr">+20 10 63254311</span>
+                <span dir="ltr">{t("footer_phone1")}</span>
               </a>
               <a
                 href="tel:+201020453469"
                 className="text-gray-400 hover:text-white flex items-center justify-center gap-2"
               >
                 <FaPhoneAlt size={20} />
-                <span dir="ltr">+20 10 20453469</span>
+                <span dir="ltr">{t("footer_phone2")}</span>
               </a>
             </div>
           </div>
@@ -68,7 +69,7 @@ function Footer() {
                 className="text-gray-400 hover:text-white flex items-center justify-center gap-2"
               >
                 <FaFacebook size={20} />
-                <span>فيسبوك</span>
+                <span>{t("footer_facebook")}</span>
               </a>
             </div>
 
@@ -78,7 +79,7 @@ function Footer() {
                 className="text-gray-400 hover:text-white flex items-center justify-center gap-2"
               >
                 <FaWhatsapp size={20} />
-                <span>واتساب</span>
+                <span>{t("footer_whatsapp")}</span>
               </a>
             </div>
 
@@ -88,15 +89,13 @@ function Footer() {
                 className="text-gray-400 hover:text-white flex items-center justify-center gap-2"
               >
                 <FaTiktok size={20} />
-                <span>تيك توك</span>
+                <span>{t("footer_tiktok")}</span>
               </a>
             </div>
           </div>
         </div>
 
-        <p className="mt-6 text-sm text-center">
-          &copy; 2025 MAGIC Dental Lab , All Rights Reserved
-        </p>
+        <p className="mt-6 text-sm text-center">{t("footer_rights")}</p>
       </div>
     </footer>
   );

@@ -3,19 +3,18 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import emailjs from "@emailjs/browser";
 import background from "../assets/imgs/background.jpeg";
-// import Input from "./shared/Input";
+import { useTranslation } from "react-i18next";
 
 function ContactSection() {
+  const { t } = useTranslation();
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
   const [showPopup, setShowPopup] = useState(false);
 
   const validationSchema = Yup.object({
-    name: Yup.string().required("الاسم مطلوب"),
-    phone: Yup.string().required("رقم الهاتف مطلوب"),
-    email: Yup.string()
-      .email("البريد الإلكتروني غير صالح")
-      .required("البريد الإلكتروني مطلوب"),
+    name: Yup.string().required(t("name_required")),
+    phone: Yup.string().required(t("phone_required")),
+    email: Yup.string().email(t("invalid_email")).required(t("email_required")),
   });
 
   const formik = useFormik({
@@ -42,7 +41,7 @@ function ContactSection() {
         );
         setSuccess(true);
         setShowPopup(true);
-        formik.resetForm(); // إعادة تعيين البيانات بعد الإرسال الناجح
+        formik.resetForm();
       } catch (err) {
         console.error(err);
       } finally {
@@ -65,7 +64,7 @@ function ContactSection() {
     <section id="contact" className="py-16 bg-black">
       <div className="container mx-auto px-4 mt-12">
         <h2 className="text-5xl font-bold text-center mb-12 text-white">
-          تواصل معنا
+          {t("contact_section_title")}
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -85,21 +84,21 @@ function ContactSection() {
               {[
                 {
                   key: "name",
-                  label: "الاسم",
+                  label: t("name_label"),
                   type: "text",
-                  placeholder: "أدخل اسمك",
+                  placeholder: t("enter_name"),
                 },
                 {
                   key: "phone",
-                  label: "رقم الهاتف",
+                  label: t("phone_label"),
                   type: "number",
-                  placeholder: "أدخل رقم هاتفك",
+                  placeholder: t("enter_phone"),
                 },
                 {
                   key: "email",
-                  label: "البريد الإلكتروني",
+                  label: t("email_label"),
                   type: "email",
-                  placeholder: "أدخل بريدك الإلكتروني",
+                  placeholder: t("enter_email"),
                 },
               ].map((input) => (
                 <div key={input.key}>
@@ -119,11 +118,13 @@ function ContactSection() {
               ))}
 
               <div>
-                <label className="text-white block mb-2">الرسالة</label>
+                <label className="text-white block mb-2">
+                  {t("message_label")}
+                </label>
                 <textarea
                   {...formik.getFieldProps("message")}
                   className="w-full p-3 bg-[#101010d8] text-white rounded-lg"
-                  placeholder="أدخل رسالتك"
+                  placeholder={t("enter_message")}
                   rows="4"
                 />
               </div>
@@ -134,11 +135,11 @@ function ContactSection() {
                 className="w-full bg-blue-600 cursor-pointer hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 disabled:opacity-50"
               >
                 {loading ? (
-                  "جاري الإرسال..."
+                  t("sending")
                 ) : (
                   <span className="flex items-center justify-center gap-2">
                     <i className="fas fa-paper-plane text-xl"></i>
-                    إرسال الطلب
+                    {t("submit_button_text")}
                   </span>
                 )}
               </button>
@@ -151,10 +152,10 @@ function ContactSection() {
               >
                 <div className="bg-white p-8 rounded-lg text-center">
                   <h3 className="text-2xl font-bold text-green-600">
-                    تم الإرسال بنجاح!
+                    {t("success_popup_title")}
                   </h3>
                   <p className="text-gray-700 mt-4">
-                    شكراً لتواصلك معنا، سنرد عليك قريباً.
+                    {t("success_popup_message")}
                   </p>
                 </div>
               </div>

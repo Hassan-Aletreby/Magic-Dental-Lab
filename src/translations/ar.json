@@ -1,0 +1,115 @@
+{
+  "home": "الرئيسية",
+  "about": "عنّا",
+  "service": "الخدمات",
+  "location": "الموقع",
+  "contact": "اتصل بنا",
+  "hero_title": "معمل ماجيك لتراكيب الأسنان",
+  "hero_subtitle": "ابتسامتك أولويتنا",
+  "product_slider_title": "ابتسامتك أولويتنا",
+  "product_slider_description": "نحن نقدم زراعة الأسنان عالية الجودة والتركيبات المتقدمة لضمان راحة المريض وتحقيق نتائج دائمة وجميلة.",
+  "about_title": "عن المعمل",
+  "about_description": "نحن في Magic Dental Lab نعتبر أن الابتسامة هي أول انطباع يتركه الشخص، ولذلك نركز بشكل كامل على تقديم أعلى جودة في مجال التركيبات السنية.",
+  "about_high_precision_title": "دقة التصميم العالية",
+  "about_high_precision_description": "نحن نستخدم أحدث ماكينة طحن وتقنيات الـ CAD CAM المتطورة لضمان نتائج مثالية لكل حالة مع أعلى درجات الدقة.",
+  "about_materials_title": "الخامات",
+  "about_materials_description": "نلتزم باستخدام مواد طبية معتمدة ومضمونة لضمان منتجات تدوم طويلاً وتلبي أعلى معايير الجودة.",
+  "about_fast_execution_title": "تنفيذ سريع",
+  "about_fast_execution_description": "نلتزم بتسليم العمل في أسرع وقت، مما يتيح لك تلبية احتياجات مرضاك في الوقت المحدد.",
+  "about_service_variety_title": "تنوع الخدمات",
+  "about_service_variety_description": "نقدم مجموعة متنوعة من التركيبات الثابتة والمتحركة، زراعة الأسنان، وحلول تجميلية مع أفضل الخامات.",
+  "about_professional_team_title": "فريق عمل محترف",
+  "about_professional_team_description": "فريقنا من الفنيين المتخصصين يمتلكون الخبرة والكفاءة اللازمة للحصول على أفضل النتائج.",
+  "about_competitive_prices_title": "أسعار تنافسية",
+  "about_competitive_prices_description": "نقدم خدمات ذات جودة عالية بأسعار تناسب جميع العملاء.",
+  "about_dentist_title": "دكتور أسنان؟ نحن هنا لمساعدتك!",
+  "about_dentist_description": "إذا كنت تدير عيادتك وتبحث عن معمل موثوق يقدم لك كل ما تحتاجه بأحدث الأجهزة وأعلى مستوى من الخدمة، فنحن هنا من أجلك.",
+  "about_feature_1": "أجهزة CAD CAM الحديثة (Xtcera Milling Machine 500 Plus - Alliedstar Intra Oral Scanner)",
+  "about_feature_2": "خدمة intra-oral scanner ستكون متاحة في عياداتك لتجنب مشاكل impression اليدوي.",
+  "about_feature_3": "جميع أنواع التركيبات الثابتة.",
+  "about_feature_4": "تصميم ابتسامة رقمية (digital smile design) لأفضل ابتسامة لمرضاك.",
+  "about_feature_5": "أسعار تنافسية لجعل خدمتنا في متناول الجميع.",
+  "about_feature_6": "مناديب متاحة في المنصورة وجميع المحافظات.",
+  "services_section_title": "خدماتنا",
+  "services": [
+    {
+      "title": "تصميم و تصنيع رقمي (CAD-CAM)",
+      "features": [
+        "تصميم دقيق ثلاثي الأبعاد",
+        "تصنيع التيجان والجسور في ساعات",
+        "خالية من الأخطاء البشرية"
+      ]
+    },
+    {
+      "title": "تيجان Full Zirconia",
+      "features": [
+        "أقوى أنواع الزركونيا (1400 MPa)",
+        "مناسبة للأضراس والخلفية",
+        "خالية من المعدن تمامًا"
+      ]
+    },
+    {
+      "title": "زركونيا متعددة الطبقات",
+      "features": [
+        "طبقات متدرجة لشفافية طبيعية",
+        "مثالية للأسنان الأمامية",
+        "قوة تحمل تصل إلى 850 MPa"
+      ]
+    },
+    {
+      "title": "E-Max (ليثيوم ديسيليكات)",
+      "features": [
+        "شفافية عالية كالأسنان الطبيعية",
+        "نوعان: E-Max Press و E-Max CAD",
+        "للحشوات والتيجان الأمامية"
+      ]
+    },
+    {
+      "title": "تيجان خزفية على معدنية (PFM)",
+      "features": [
+        "مزج بين متانة المعدن وجمال الخزف",
+        "متوافقة مع نظام Vita 3D Master للألوان",
+        "خيار اقتصادي متين"
+      ]
+    },
+    {
+      "title": "سلسلة Zolid (HT & FX)",
+      "features": [
+        "Zolid HT: شفافية عالية",
+        "Zolid FX: مرونة وقوة",
+        "مناسبة لجميع أنواع التعويضات"
+      ]
+    }
+  ],
+  "location_section_title": "موقعنا",
+  "location_popup_text": "معملنا هنا!",
+  "get_directions_button": "الحصول على الاتجاهات",
+  "location_section_title": "Our Location",
+  "location_popup_text": "Our lab is here!",
+  "get_directions_button": "Get Directions",
+  "contact_section_title": "تواصل معنا",
+  "name_label": "الاسم",
+  "phone_label": "رقم الهاتف",
+  "email_label": "البريد الإلكتروني",
+  "message_label": "الرسالة",
+  "enter_name": "أدخل اسمك",
+  "enter_phone": "أدخل رقم هاتفك",
+  "enter_email": "أدخل بريدك الإلكتروني",
+  "sending": "جاري الإرسال...",
+  "submit_button_text": "إرسال الطلب",
+  "success_popup_title": "تم الإرسال بنجاح!",
+  "success_popup_message": "شكراً لتواصلك معنا، سنرد عليك قريباً.",
+  "footer_address": "العنوان : المنصورة - طلخا - شارع صلاح سالم",
+  "footer_email": "magicdentallab54@gmail.com",
+  "footer_phone1": "+20 10 63254311",
+  "footer_phone2": "+20 10 20453469",
+  "footer_facebook": "فيسبوك",
+  "footer_whatsapp": "واتساب",
+  "footer_tiktok": "تيك توك",
+  "footer_rights": "© 2025 MAGIC Dental Lab , جميع الحقوق محفوظة",
+  "Anas_Fawzy": "د/ أنس فوزي",
+  "Ahmed_Sameh": "د/ أحمد سامح"
+}
+
+
+

@@ -1,4 +1,3 @@
-import "./App.css";
 import Header from "./components/header";
 import Productslider from "./components/Productslider";
 import HeroSection from "./components/Hero";
@@ -7,6 +6,7 @@ import ServicesSection from "./components/Service";
 import Footer from "./components/footer";
 import ContactSection from "./components/Contact";
 import LocationMap from "./components/Location";
+import "./i18n";
 
 function App() {
   return (

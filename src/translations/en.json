@@ -1,0 +1,113 @@
+{
+  "home": "Home",
+  "about": "About",
+  "service": "Services",
+  "location": "Location",
+  "contact": "Contact",
+  "hero_title": "Magic Dental Lab",
+  "hero_subtitle": "Your smile is our priority",
+  "product_slider_title": "Your smile is our priority",
+  "product_slider_description": "We offer high-quality dental implants and advanced restorations to ensure patient comfort and beautiful, lasting results.",
+  "about_title": "About the Lab",
+  "about_description": "At Magic Dental Lab, we believe that your smile is the first impression you leave behind, so we focus on providing the highest quality in dental restorations.",
+  "about_high_precision_title": "High Precision Design",
+  "about_high_precision_description": "We use the latest milling machines and advanced CAD CAM technologies to ensure perfect results for each case with the highest precision.",
+  "about_materials_title": "Materials",
+  "about_materials_description": "We are committed to using certified and guaranteed medical materials to ensure long-lasting products that meet the highest quality standards.",
+  "about_fast_execution_title": "Fast Execution",
+  "about_fast_execution_description": "We commit to delivering work in the fastest time, allowing you to meet your patients' needs on time.",
+  "about_service_variety_title": "Variety of Services",
+  "about_service_variety_description": "We offer a wide range of fixed and removable restorations, dental implants, and aesthetic solutions with the best materials.",
+  "about_professional_team_title": "Professional Team",
+  "about_professional_team_description": "Our team of skilled technicians has the experience and expertise to achieve the best results.",
+  "about_competitive_prices_title": "Competitive Prices",
+  "about_competitive_prices_description": "We offer high-quality services at prices that suit all customers.",
+  "about_dentist_title": "Dentist? We're here to help!",
+  "about_dentist_description": "If you run your own clinic and are looking for a reliable lab that provides everything you need with the latest equipment and the highest level of service, we're here for you.",
+  "about_feature_1": "Modern CAD CAM equipment (Xtcera Milling Machine 500 Plus - Alliedstar Intra Oral Scanner)",
+  "about_feature_2": "Intra-oral scanner service available at your clinics to avoid manual impression problems.",
+  "about_feature_3": "All types of fixed restorations.",
+  "about_feature_4": "Digital smile design for the best smile for your patients.",
+  "about_feature_5": "Competitive prices to make our service affordable for everyone.",
+  "about_feature_6": "Representatives available in Mansoura and all governorates.",
+  "services_section_title": "Our Services",
+  "services": [
+    {
+      "title": "Digital Design and Manufacturing (CAD-CAM)",
+      "features": [
+        "Precise 3D design",
+        "Crown and bridge manufacturing in hours",
+        "Error-free production"
+      ]
+    },
+    {
+      "title": "Full Zirconia Crowns",
+      "features": [
+        "The strongest zirconia (1400 MPa)",
+        "Ideal for molars and posterior teeth",
+        "Completely metal-free"
+      ]
+    },
+    {
+      "title": "Zirconia Multi-Layer",
+      "features": [
+        "Gradual layers for natural translucency",
+        "Ideal for anterior teeth",
+        "Strength up to 850 MPa"
+      ]
+    },
+    {
+      "title": "E-Max (Lithium Disilicate)",
+      "features": [
+        "High translucency like natural teeth",
+        "Two types: E-Max Press and E-Max CAD",
+        "For fillings and anterior crowns"
+      ]
+    },
+    {
+      "title": "PFM (Porcelain Fused to Metal) Crowns",
+      "features": [
+        "A blend of metal strength and porcelain beauty",
+        "Compatible with Vita 3D Master color system",
+        "A durable and cost-effective option"
+      ]
+    },
+    {
+      "title": "Zolid Series (HT & FX)",
+      "features": [
+        "Zolid HT: High translucency",
+        "Zolid FX: Flexibility and strength",
+        "Suitable for all types of restorations"
+      ]
+    }
+  ],
+  "contact_section_title": "Contact Us",
+  "name_label": "Name",
+  "phone_label": "Phone Number",
+  "email_label": "Email Address",
+  "message_label": "Message",
+  "enter_name": "Enter your name",
+  "enter_phone": "Enter your phone number",
+  "enter_email": "Enter your email",
+  "sending": "Sending...",
+  "submit_button_text": "Submit Request",
+  "success_popup_title": "Message Sent Successfully!",
+  "success_popup_message": "Thank you for reaching out, we will get back to you soon.",
+  "footer_address": "Address: Mansoura - Talkha - Salah Salem Street",
+  "footer_email": "magicdentallab54@gmail.com",
+  "footer_phone1": "+20 10 63254311",
+  "footer_phone2": "+20 10 20453469",
+  "footer_facebook": "Facebook",
+  "footer_whatsapp": "WhatsApp",
+  "footer_tiktok": "TikTok",
+  "footer_rights": "© 2025 MAGIC Dental Lab , All Rights Reserved",
+  "Anas_Fawzy": "Dr.Anas Fawzy",
+  "Ahmed_Sameh": "Dr.Ahmed Sameh"
+}
+
+
+
+
+
+
+

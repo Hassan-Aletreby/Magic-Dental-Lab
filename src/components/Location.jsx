@@ -1,9 +1,11 @@
 import { useState, useRef, useEffect } from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import { Icon } from "leaflet";
+import { useTranslation } from "react-i18next";
 import "leaflet/dist/leaflet.css";
 
 const LocationMap = () => {
+  const { t } = useTranslation();
   const [position, setPosition] = useState([31.053228, 31.379471]);
   const markerRef = useRef(null);
 
@@ -26,7 +28,7 @@ const LocationMap = () => {
     <section id="location" className="pt-1">
       <div className="container mx-auto px-4 mt-32 rounded-lg overflow-hidden">
         <h2 className="text-5xl font-bold text-center mb-12 text-white">
-          موقعنا
+          {t("location_section_title")}
         </h2>
         <div
           className="w-full rounded-lg overflow-hidden"
@@ -65,12 +67,12 @@ const LocationMap = () => {
               ref={markerRef}
             >
               <Popup>
-                معملنا هنا! <br />
+                {t("location_popup_text")} <br />
                 <button
                   onClick={getDirections}
                   className="mt-2 px-4 py-2 bg-blue-500 text-white rounded-md"
                 >
-                  الحصول على الاتجاهات
+                  {t("get_directions_button")}
                 </button>
               </Popup>
             </Marker>

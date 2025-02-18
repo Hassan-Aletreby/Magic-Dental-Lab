@@ -22,3 +22,10 @@ font-family: "Cairo", serif;
 html {
     scroll-behavior: smooth;
 }
+html[lang="ar"] {
+    direction: rtl !important;
+}
+
+html[lang="en"] {
+    direction: ltr !important;
+}

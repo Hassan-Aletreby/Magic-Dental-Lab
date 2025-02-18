@@ -1,14 +1,10 @@
 import { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 
 function Header() {
-  const [links, setLinks] = useState([
-    { name: "الرئيسية", id: "home" },
-    { name: "عنّا", id: "about" },
-    { name: "الخدمات", id: "services" },
-    { name: "الموقع", id: "location" },
-    { name: "اتصل بنا", id: "contact" },
-  ]);
+  const { t, i18n } = useTranslation();
   const [scrolling, setScrolling] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,6 +20,11 @@ function Header() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  const handleLanguageChange = (lang) => {
+    i18n.changeLanguage(lang);
+    setIsDropdownOpen(false);
+  };
 
   return (
     <header
@@ -46,20 +47,77 @@ function Header() {
             <p className="text-[12px] md:text-xs">Dental Lab</p>
           </div>
         </a>
+
         <nav className="hidden md:flex basis-2/3 text-right">
           <ul className="flex gap-12 justify-end text-white">
-            {links.map((link) => (
-              <li key={link.name}>
-                <a
-                  href={`#${link.id}`}
-                  className="text-white text-[18px] opacity-[0.9] hover:opacity-[1] hover:underline transition-all duration-300"
-                >
-                  {link.name}
-                </a>
-              </li>
-            ))}
+            <li>
+              <a
+                href="#home"
+                className="text-white text-[18px] opacity-[0.9] hover:opacity-[1] hover:underline transition-all duration-300"
+              >
+                {t("home")}
+              </a>
+            </li>
+            <li>
+              <a
+                href="#about"
+                className="text-white text-[18px] opacity-[0.9] hover:opacity-[1] hover:underline transition-all duration-300"
+              >
+                {t("about")}
+              </a>
+            </li>
+            <li>
+              <a
+                href="#services"
+                className="text-white text-[18px] opacity-[0.9] hover:opacity-[1] hover:underline transition-all duration-300"
+              >
+                {t("service")}
+              </a>
+            </li>
+            <li>
+              <a
+                href="#location"
+                className="text-white text-[18px] opacity-[0.9] hover:opacity-[1] hover:underline transition-all duration-300"
+              >
+                {t("location")}
+              </a>
+            </li>
+            <li>
+              <a
+                href="#contact"
+                className="text-white text-[18px] opacity-[0.9] hover:opacity-[1] hover:underline transition-all duration-300"
+              >
+                {t("contact")}
+              </a>
+            </li>
           </ul>
         </nav>
+
+        <div className="relative">
+          <button
+            className="text-white px-4 py-2 rounded-md cursor-pointer"
+            onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+          >
+            {i18n.language === "ar" ? "العربية" : "English"}
+          </button>
+
+          {isDropdownOpen && (
+            <div className="absolute right-0 mt-2 w-32 bg-black text-white rounded-md shadow-lg">
+              <button
+                onClick={() => handleLanguageChange("ar")}
+                className="block w-full px-4 py-2 text-right hover:bg-gray-700 cursor-pointer"
+              >
+                العربية
+              </button>
+              <button
+                onClick={() => handleLanguageChange("en")}
+                className="block w-full px-4 py-2 text-right hover:bg-gray-700 cursor-pointer"
+              >
+                English
+              </button>
+            </div>
+          )}
+        </div>
       </div>
     </header>
   );

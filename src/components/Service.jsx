@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import CAD from "../assets/imgs/1.jpeg";
 import Zirconia from "../assets/imgs/2.jpeg";
 import MultiLayer from "../assets/imgs/3.jpeg";
@@ -6,71 +7,73 @@ import PFM from "../assets/imgs/PFM.png";
 import Zolid from "../assets/imgs/Zolid.jpeg";
 
 function ServicesSection() {
+  const { t } = useTranslation();
+
   const services = [
     {
       id: 1,
-      title: "تصميم و تصنيع رقمي (CAD-CAM)",
+      title: t("services.0.title"),
       image: CAD,
-      alt: "تقنية CAD-CAM",
+      alt: t("services.0.title"),
       features: [
-        "تصميم دقيق ثلاثي الأبعاد",
-        "تصنيع التيجان والجسور في ساعات",
-        "خالية من الأخطاء البشرية",
+        t("services.0.features.0"),
+        t("services.0.features.1"),
+        t("services.0.features.2"),
       ],
     },
     {
       id: 2,
-      title: "تيجان Full Zirconia",
+      title: t("services.1.title"),
       image: Zirconia,
-      alt: "تيجان زركونيا كاملة",
+      alt: t("services.1.title"),
       features: [
-        "أقوى أنواع الزركونيا (1400 MPa)",
-        "مناسبة للأضراس والخلفية",
-        "خالية من المعدن تمامًا",
+        t("services.1.features.0"),
+        t("services.1.features.1"),
+        t("services.1.features.2"),
       ],
     },
     {
       id: 3,
-      title: "Zirconia Multi-Layer",
+      title: t("services.2.title"),
       image: MultiLayer,
-      alt: "زركونيا متعددة الطبقات",
+      alt: t("services.2.title"),
       features: [
-        "طبقات متدرجة لشفافية طبيعية",
-        "مثالية للأسنان الأمامية",
-        "قوة تحمل تصل إلى 850 MPa",
+        t("services.2.features.0"),
+        t("services.2.features.1"),
+        t("services.2.features.2"),
       ],
     },
     {
       id: 4,
-      title: "E-Max (ليثيوم ديسيليكات)",
+      title: t("services.3.title"),
       image: EMax,
-      alt: "حلول E-Max",
+      alt: t("services.3.title"),
       features: [
-        "شفافية عالية كالأسنان الطبيعية",
-        "نوعان: E-Max Press و E-Max CAD",
-        "للحشوات والتيجان الأمامية",
+        t("services.3.features.0"),
+        t("services.3.features.1"),
+        t("services.3.features.2"),
       ],
     },
     {
       id: 5,
-      title: "تيجان خزفية على معدنية (PFM)",
+      title: t("services.4.title"),
       image: PFM,
-      alt: "تيجان PFM",
+      alt: t("services.4.title"),
       features: [
-        "مزج بين متانة المعدن وجمال الخزف",
-        "متوافقة مع نظام Vita 3D Master للألوان",
-        "خيار اقتصادي متين",
+        t("services.4.features.0"),
+        t("services.4.features.1"),
+        t("services.4.features.2"),
       ],
     },
     {
       id: 6,
-      title: "سلسلة Zolid (HT & FX)",
+      title: t("services.5.title"),
       image: Zolid,
-      alt: "سلسلة Zolid",
+      alt: t("services.5.title"),
       features: [
-        "Zolid HT: شفافية عالية",
-        "Zolid FX: مرونة وقوة",
-        "مناسبة لجميع أنواع التعويضات",
+        t("services.5.features.0"),
+        t("services.5.features.1"),
+        t("services.5.features.2"),
       ],
     },
   ];
@@ -79,19 +82,19 @@ function ServicesSection() {
     <section id="services" className="py-16 bg-black pt-24">
       <div className="container mx-auto px-4">
         <h2 className="text-5xl font-bold text-center mb-12 text-white">
-          خدماتنا
+          {t("services_section_title")}
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {services.map((service) => (
             <div
               key={service.id}
-              className="bg-[#101010d8] truncate rounded-xl transition-all duration-300 ease-in-out text-right  hover:bg-[#3838387a]"
+              className="bg-[#101010d8] truncate rounded-xl transition-all duration-300 ease-in-out text-right hover:bg-[#3838387a]"
             >
               <div className="w-full max-h-48 h-48 flex items-center justify-center truncate overflow-hidden">
                 <img
                   src={service.image}
                   alt={service.alt}
-                  className="w-full object-cover transition-transform duration-300  hover:rotate-3 hover:scale-[1.1] "
+                  className="w-full object-cover transition-transform duration-300 hover:rotate-3 hover:scale-[1.1]"
                 />
               </div>
               <div className="p-6 pt-0">
