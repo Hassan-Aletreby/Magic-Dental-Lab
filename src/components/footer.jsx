@@ -6,6 +6,7 @@ import {
   FaTiktok,
 } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
+import Logo from "../assets/imgs/logo3.jpg";
 
 function Footer() {
   const { t } = useTranslation();
@@ -20,7 +21,7 @@ function Footer() {
               className="flex items-center justify-start text-white mb-3"
             >
               <img
-                src="/src/assets/imgs/logo3.jpg"
+                src={Logo}
                 alt="logo-img"
                 className="w-15 h-15 rounded-4xl"
               />
