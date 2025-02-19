@@ -102,7 +102,13 @@
   "footer_tiktok": "TikTok",
   "footer_rights": "© 2025 MAGIC Dental Lab , All Rights Reserved",
   "Anas_Fawzy": "Dr.Anas Fawzy",
-  "Ahmed_Sameh": "Dr.Ahmed Sameh"
+  "Ahmed_Sameh": "Dr.Ahmed Sameh",
+  "validations" :{
+    "name_required" :"Field Name is required",
+    "phone_required" :"Field Phone is required",
+    "email_required" :"Field Email is required",
+    "invalid_email" :"Invalid Email Address"
+  }
 }
 
 

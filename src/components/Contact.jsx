@@ -4,17 +4,40 @@ import * as Yup from "yup";
 import emailjs from "@emailjs/browser";
 import background from "../assets/imgs/background.jpeg";
 import { useTranslation } from "react-i18next";
+import Input from "./shared/Input";
 
 function ContactSection() {
   const { t } = useTranslation();
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
   const [showPopup, setShowPopup] = useState(false);
+  const contactFormList = [
+    {
+      key: "name",
+      label: t("name_label"),
+      type: "text",
+      placeholder: t("enter_name"),
+    },
+    {
+      key: "phone",
+      label: t("phone_label"),
+      type: "number",
+      placeholder: t("enter_phone"),
+    },
+    {
+      key: "email",
+      label: t("email_label"),
+      type: "email",
+      placeholder: t("enter_email"),
+    },
+  ];
 
   const validationSchema = Yup.object({
-    name: Yup.string().required(t("name_required")),
-    phone: Yup.string().required(t("phone_required")),
-    email: Yup.string().email(t("invalid_email")).required(t("email_required")),
+    name: Yup.string().required(t("validations.name_required")),
+    phone: Yup.string().required(t("validations.phone_required")),
+    email: Yup.string()
+      .email(t("validations.invalid_email"))
+      .required(t("validations.email_required")),
   });
 
   const formik = useFormik({
@@ -68,11 +91,11 @@ function ContactSection() {
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="relative">
+          <div className="overflow-hidden rounded-2xl">
             <img
               src={background}
               alt="Contact Image"
-              className="w-full h-full object-cover rounded-2xl"
+              className="h-full object-cover "
             />
           </div>
 
@@ -81,44 +104,24 @@ function ContactSection() {
               onSubmit={formik.handleSubmit}
               className="space-y-6 text-right"
             >
-              {[
-                {
-                  key: "name",
-                  label: t("name_label"),
-                  type: "text",
-                  placeholder: t("enter_name"),
-                },
-                {
-                  key: "phone",
-                  label: t("phone_label"),
-                  type: "number",
-                  placeholder: t("enter_phone"),
-                },
-                {
-                  key: "email",
-                  label: t("email_label"),
-                  type: "email",
-                  placeholder: t("enter_email"),
-                },
-              ].map((input) => (
-                <div key={input.key}>
-                  <label className="text-white block mb-2">{input.label}</label>
-                  <input
-                    {...formik.getFieldProps(input.key)}
-                    type={input.type}
-                    placeholder={input.placeholder}
-                    className="w-full p-3 bg-[#101010d8] text-white rounded-lg"
-                  />
-                  {formik.touched[input.key] && formik.errors[input.key] && (
-                    <div className="text-red-500 text-sm">
-                      {formik.errors[input.key]}
-                    </div>
-                  )}
-                </div>
+              {contactFormList.map((input) => (
+                <Input
+                  key={input.key}
+                  label={input.label}
+                  type={input.type}
+                  placeholder={input.placeholder}
+                  error={formik.touched[input.key] && formik.errors[input.key]}
+                  errorMessage={
+                    formik.touched[input.key] && formik.errors[input.key]
+                  }
+                  onChange={(value) => {
+                    formik.setFieldValue(input.key, value);
+                  }}
+                />
               ))}
 
               <div>
-                <label className="text-white block mb-2">
+                <label className="text-white block mb-2 text-start">
                   {t("message_label")}
                 </label>
                 <textarea

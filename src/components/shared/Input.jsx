@@ -21,7 +21,7 @@ function Input({
   return (
     <div className="flex flex-col">
       {label && (
-        <label className="text-white block mb-2">
+        <label className="text-white text-start block mb-2">
           {label}
           {required && <span className="text-red-700">*</span>}
         </label>
@@ -35,7 +35,9 @@ function Input({
         }`}
         placeholder={placeholder}
       />
-      {error && <p className="text-red-700 text-sm mt-1">* {errorMessage}</p>}
+      {error && (
+        <p className="text-red-700 text-sm text-start mt-1">* {errorMessage}</p>
+      )}
     </div>
   );
 }

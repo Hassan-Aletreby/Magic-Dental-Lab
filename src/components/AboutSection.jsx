@@ -6,7 +6,7 @@ function AboutSection() {
 
   return (
     <section id="about" className="bg-black py-20 text-white">
-      <div className="container mx-auto px-4 text-right">
+      <div className="container mx-auto px-4 text-start">
         <h2 className="text-5xl font-bold text-center mb-3 text-white">
           {t("about_title")}
         </h2>
@@ -14,7 +14,7 @@ function AboutSection() {
           {t("about_description")}
         </p>
         <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-12">
-          <div className="text-right">
+          <div className="text-start">
             <h3 className="text-2xl font-semibold">
               {t("about_high_precision_title")}
             </h3>
@@ -23,7 +23,7 @@ function AboutSection() {
             </p>
           </div>
 
-          <div className="text-right">
+          <div className="text-start">
             <h3 className="text-2xl font-semibold">
               {t("about_materials_title")}
             </h3>
@@ -32,7 +32,7 @@ function AboutSection() {
             </p>
           </div>
 
-          <div className="text-right">
+          <div className="text-start">
             <h3 className="text-2xl font-semibold">
               {t("about_fast_execution_title")}
             </h3>
@@ -41,7 +41,7 @@ function AboutSection() {
             </p>
           </div>
 
-          <div className="text-right">
+          <div className="text-start">
             <h3 className="text-2xl font-semibold">
               {t("about_service_variety_title")}
             </h3>
@@ -50,7 +50,7 @@ function AboutSection() {
             </p>
           </div>
 
-          <div className="text-right">
+          <div className="text-start">
             <h3 className="text-2xl font-semibold">
               {t("about_professional_team_title")}
             </h3>
@@ -59,7 +59,7 @@ function AboutSection() {
             </p>
           </div>
 
-          <div className="text-right">
+          <div className="text-start">
             <h3 className="text-2xl font-semibold">
               {t("about_competitive_prices_title")}
             </h3>
@@ -76,7 +76,7 @@ function AboutSection() {
             {t("about_dentist_description")}
           </p>
 
-          <ul className="mt-6 space-y-6 text-right text-lg">
+          <ul className="mt-6 space-y-6 text-start text-lg">
             <li className="flex items-center gap-3 text-gray-300 hover:text-white transition-colors duration-300">
               <FaCheckCircle className="text-green-500" />
               {t("about_feature_1")}

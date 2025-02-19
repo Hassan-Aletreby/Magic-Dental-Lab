@@ -84,9 +84,6 @@
   "location_section_title": "موقعنا",
   "location_popup_text": "معملنا هنا!",
   "get_directions_button": "الحصول على الاتجاهات",
-  "location_section_title": "Our Location",
-  "location_popup_text": "Our lab is here!",
-  "get_directions_button": "Get Directions",
   "contact_section_title": "تواصل معنا",
   "name_label": "الاسم",
   "phone_label": "رقم الهاتف",
@@ -108,7 +105,13 @@
   "footer_tiktok": "تيك توك",
   "footer_rights": "© 2025 MAGIC Dental Lab , جميع الحقوق محفوظة",
   "Anas_Fawzy": "د/ أنس فوزي",
-  "Ahmed_Sameh": "د/ أحمد سامح"
+  "Ahmed_Sameh": "د/ أحمد سامح",
+  "validations" :{
+    "name_required" :"حقل الاسم مطلوب",
+    "phone_required" :"حقل رقم الهاتف مطلوب",
+    "email_required" :"حقل الإيميل مطلوب",
+    "invalid_email" :"خطأ في الإيميل"
+  }
 }
 
 

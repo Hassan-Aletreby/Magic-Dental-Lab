@@ -94,16 +94,16 @@ function ServicesSection() {
                 <img
                   src={service.image}
                   alt={service.alt}
-                  className="w-full object-cover transition-transform duration-300 hover:rotate-3 hover:scale-[1.1]"
+                  className="w-full h-full object-cover transition-transform duration-300 hover:rotate-3 hover:scale-[1.1]"
                 />
               </div>
               <div className="p-6 pt-0">
                 <h3 className="text-[20px] font-semibold text-white text-center mt-3 mb-2">
                   {service.title}
                 </h3>
-                <ul className="text-white mt-2 list-disc pr-4 text-[16px]">
+                <ul className="text-white mt-2 list-disc ps-4">
                   {service.features.map((feature, index) => (
-                    <li key={index} className="text-sm">
+                    <li key={index} className="text-sm text-start">
                       {feature}
                     </li>
                   ))}
