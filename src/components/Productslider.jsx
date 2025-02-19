@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import Product1 from "../assets/imgs/slider23.jpg";
 import Product2 from "../assets/imgs/slider24.jpg";
 import Product3 from "../assets/imgs/slider22.jpeg";
-
+import i18next from "i18next";
 const Products = [
   {
     id: 1,
@@ -22,7 +22,7 @@ const Products = [
 function Productslider() {
   const { t } = useTranslation(); // هنا بنستخدم الترجمة
   const [activeIndex, setActiveIndex] = useState(0);
-
+  const { language } = i18next;
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveIndex((prevIndex) => (prevIndex + 1) % Products.length);
@@ -45,7 +45,9 @@ function Productslider() {
           <div
             className="absolute top-0 left-0 w-full h-full flex transition-transform duration-700 ease-in-out"
             style={{
-              transform: `translateX(${activeIndex * 100}%)`,
+              transform: `translateX(${language === "ar" ? "" : "-"}${
+                activeIndex * 100
+              }%)`,
             }}
           >
             {Products.map((product) => (
@@ -58,8 +60,13 @@ function Productslider() {
               ></div>
             ))}
           </div>
+          {/* className={`absolute bottom-4 right-1/2 transform  flex space-x-2 ${
+            true ? "translate-x-1/2" : "-translate-x-1/2"
+          }`} */}
 
-          <div className="absolute bottom-4 right-1/2 transform translate-x-1/2 flex space-x-2">
+          <div
+            className={`absolute bottom-4 start-1/2 transform  flex space-x-2 translate-x-1/2`}
+          >
             {Products.map((_, index) => (
               <span
                 key={index}
