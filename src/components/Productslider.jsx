@@ -34,7 +34,7 @@ function Productslider() {
   return (
     <div className="container mx-auto py-16">
       <section className="flex flex-col lg:flex-row justify-between items-center">
-        <div className="w-full lg:w-1/2 text-center lg:text-right px-8 text-white mb-8 lg:mb-0">
+        <div className="w-full lg:w-1/2 text-center md:text-start px-8 text-white mb-8 lg:mb-0">
           <h2 className="text-5xl font-bold mb-4">
             {t("product_slider_title")}
           </h2>
