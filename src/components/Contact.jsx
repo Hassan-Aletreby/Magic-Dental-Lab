@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import emailjs from "@emailjs/browser";
-import background from "../assets/imgs/background.jpeg";
+import background from "../assets/imgs/person.jpeg";
 import { useTranslation } from "react-i18next";
 import Input from "./shared/Input";
 
@@ -96,7 +96,7 @@ function ContactSection() {
             <img
               src={background}
               alt="Contact Image"
-              className="h-full object-cover "
+              className="h-full object-contain rounded-2xl w-full"
             />
           </div>
 
