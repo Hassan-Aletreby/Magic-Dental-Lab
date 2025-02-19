@@ -109,7 +109,8 @@
     "email_required" :"Field Email is required",
     "invalid_email" :"Invalid Email Address"
   },
-  "location_section_title":"Our Location"
+  "location_section_title":"Our Location",
+  "enter_message" : "Enter your message ..."
 
 }
 

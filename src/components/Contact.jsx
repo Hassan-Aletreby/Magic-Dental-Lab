@@ -11,6 +11,7 @@ function ContactSection() {
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
   const [showPopup, setShowPopup] = useState(false);
+
   const contactFormList = [
     {
       key: "name",
@@ -117,6 +118,7 @@ function ContactSection() {
                   onChange={(value) => {
                     formik.setFieldValue(input.key, value);
                   }}
+                  value={formik.values[input.key]}
                 />
               ))}
 
@@ -125,7 +127,9 @@ function ContactSection() {
                   {t("message_label")}
                 </label>
                 <textarea
-                  {...formik.getFieldProps("message")}
+                  name="message"
+                  value={formik.values.message}
+                  onChange={formik.handleChange}
                   className="w-full p-3 bg-[#101010d8] text-white rounded-lg"
                   placeholder={t("enter_message")}
                   rows="4"

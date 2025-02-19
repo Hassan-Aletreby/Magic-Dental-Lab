@@ -4,17 +4,13 @@ function Input({
   label,
   value = "",
   onChange,
-  inputType,
+  type,
   placeholder,
   required = false,
   error = false,
   errorMessage = "",
 }) {
-  // Initialize States
-  const [inputValue, setInputValue] = useState(value);
-  // Initialize Handlers
   const handleInputChange = (e) => {
-    setInputValue(e.target.value);
     onChange(e.target.value);
   };
 
@@ -27,11 +23,11 @@ function Input({
         </label>
       )}
       <input
-        type={inputType}
-        value={inputValue}
+        type={type}
+        value={value}
         onChange={handleInputChange}
         className={`w-full p-3 bg-[#101010d8] text-white rounded-lg ${
-          error ? "border-2  border-red-700" : ""
+          error ? "border-2 border-red-700" : ""
         }`}
         placeholder={placeholder}
       />

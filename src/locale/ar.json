@@ -111,7 +111,9 @@
     "phone_required" :"حقل رقم الهاتف مطلوب",
     "email_required" :"حقل الإيميل مطلوب",
     "invalid_email" :"خطأ في الإيميل"
-  }
+  },
+  "enter_message" : "أدخل رسالتك ..."
+
 }
 
 
