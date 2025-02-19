@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
-
+import Logo from "../assets/imgs/logo3.jpg";
 function Header() {
   const { t, i18n } = useTranslation();
   const [scrolling, setScrolling] = useState(false);
@@ -38,7 +38,7 @@ function Header() {
           className="basis-1/3 flex items-center justify-start text-white w-full"
         >
           <img
-            src="/src/assets/imgs/logo3.jpg"
+            src={Logo}
             alt="logo-img"
             className="w-16 h-16 md:w-20 md:h-20 rounded-full ml-1.5"
           />
