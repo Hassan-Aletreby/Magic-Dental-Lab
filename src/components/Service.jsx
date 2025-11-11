@@ -88,8 +88,7 @@ function ServicesSection() {
           {services.map((service) => (
             <div
               key={service.id}
-              className="bg-[#101010d8] truncate rounded-xl transition-all duration-300 ease-in-out text-right hover:bg-[#3838387a]"
-            >
+              className="bg-[#101010d8] truncate rounded-xl transition-all duration-300 ease-in-out text-right hover:bg-[#3838387a]">
               <div className="w-full max-h-48 h-48 flex items-center justify-center truncate overflow-hidden">
                 <img
                   src={service.image}

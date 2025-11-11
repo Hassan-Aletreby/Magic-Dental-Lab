@@ -5,6 +5,7 @@ import Productslider from "./components/Productslider";
 import HeroSection from "./components/Hero";
 import AboutSection from "./components/AboutSection";
 import ServicesSection from "./components/Service";
+import LabGallery from "./components/LabGallery";
 import Footer from "./components/footer";
 import ContactSection from "./components/Contact";
 import LocationMap from "./components/Location";
@@ -31,6 +32,7 @@ function App() {
       <Productslider />
       <AboutSection />
       <ServicesSection />
+      <LabGallery />
       <LocationMap />
       <ContactSection />
       <Footer />

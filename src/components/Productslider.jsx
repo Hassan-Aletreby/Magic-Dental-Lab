@@ -48,33 +48,26 @@ function Productslider() {
               transform: `translateX(${language === "ar" ? "" : "-"}${
                 activeIndex * 100
               }%)`,
-            }}
-          >
+            }}>
             {Products.map((product) => (
               <div
                 key={product.id}
                 className="flex-shrink-0 w-full h-full bg-contain bg-center bg-no-repeat"
                 style={{
                   backgroundImage: `url(${product.image})`,
-                }}
-              ></div>
+                }}></div>
             ))}
           </div>
-          {/* className={`absolute bottom-4 right-1/2 transform  flex space-x-2 ${
-            true ? "translate-x-1/2" : "-translate-x-1/2"
-          }`} */}
 
           <div
-            className={`absolute bottom-4 start-1/2 transform  flex space-x-2 translate-x-1/2`}
-          >
+            className={`absolute bottom-4 start-1/2 transform  flex space-x-2 translate-x-1/2`}>
             {Products.map((_, index) => (
               <span
                 key={index}
                 className={`w-2 h-2 rounded-full cursor-pointer ${
                   activeIndex === index ? "bg-white" : "bg-gray-800"
                 }`}
-                onClick={() => setActiveIndex(index)}
-              ></span>
+                onClick={() => setActiveIndex(index)}></span>
             ))}
           </div>
         </div>

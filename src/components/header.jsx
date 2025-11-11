@@ -42,7 +42,9 @@ function Header() {
           />
           <div className="logo__text text-right">
             <h2 className="text-lg md:text-2xl font-bold">MAGIC</h2>
-            <p className="text-[12px] md:text-xs">Dental Lab</p>
+            <p className="text-[10px] sm:text-[11px] md:text-xs text-left">
+              Dental Lab
+            </p>
           </div>
         </a>
 
@@ -67,6 +69,13 @@ function Header() {
                 href="#services"
                 className="text-white text-[18px] opacity-[0.9] hover:opacity-[1] hover:underline transition-all duration-300">
                 {t("service")}
+              </a>
+            </li>
+            <li>
+              <a
+                href="#gallery"
+                className="text-white text-[18px] opacity-[0.9] hover:opacity-[1] hover:underline transition-all duration-300">
+                {t("lab_gallery")}
               </a>
             </li>
             <li>
