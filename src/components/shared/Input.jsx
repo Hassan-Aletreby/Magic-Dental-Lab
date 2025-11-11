@@ -19,7 +19,7 @@ function Input({
       {label && (
         <label className="text-white text-start block mb-2">
           {label}
-          {required && <span className="text-red-700">*</span>}
+          {/* {required && <span className="text-red-700">*</span>} */}
         </label>
       )}
       <input

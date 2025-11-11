@@ -35,10 +35,9 @@ function ContactSection() {
 
   const validationSchema = Yup.object({
     name: Yup.string().required(t("validations.name_required")),
-    phone: Yup.string().required(t("validations.phone_required")),
-    email: Yup.string()
-      .email(t("validations.invalid_email"))
-      .required(t("validations.email_required")),
+    // phone: Yup.string()(t("validations.phone_required")),
+    email: Yup.string().email(t("validations.invalid_email")),
+    // .required(t("validations.email_required")),
   });
 
   const formik = useFormik({
@@ -103,8 +102,7 @@ function ContactSection() {
           <div className="mx-auto bg-black w-full h-full object-cover p-0">
             <form
               onSubmit={formik.handleSubmit}
-              className="space-y-6 text-right"
-            >
+              className="space-y-6 text-right">
               {contactFormList.map((input) => (
                 <Input
                   key={input.key}
@@ -139,8 +137,7 @@ function ContactSection() {
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full bg-blue-600 cursor-pointer hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 disabled:opacity-50"
-              >
+                className="w-full bg-blue-600 cursor-pointer hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 disabled:opacity-50">
                 {loading ? (
                   t("sending")
                 ) : (
@@ -155,8 +152,7 @@ function ContactSection() {
             {showPopup && (
               <div
                 className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center"
-                onClick={() => setShowPopup(false)}
-              >
+                onClick={() => setShowPopup(false)}>
                 <div className="bg-white p-8 rounded-lg text-center">
                   <h3 className="text-2xl font-bold text-green-600">
                     {t("success_popup_title")}
