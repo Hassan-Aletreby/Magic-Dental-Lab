@@ -6,7 +6,7 @@ import {
   FaTiktok,
 } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
-import Logo from "../assets/imgs/logo3.jpg";
+import Logo from "../assets/imgs/logo withnot background .png";
 
 function Footer() {
   const { t } = useTranslation();
@@ -18,13 +18,8 @@ function Footer() {
           <div className="flex flex-col items-center">
             <a
               href="/"
-              className="flex items-center justify-start text-white mb-3"
-            >
-              <img
-                src={Logo}
-                alt="logo-img"
-                className="w-15 h-15 rounded-4xl"
-              />
+              className="flex items-center justify-start text-white mb-3">
+              <img src={Logo} alt="logo-img" className="w-15 h-15" />
               <div className="logo__text text-left ml-4">
                 <h2 className="text-xl font-bold">MAGIC</h2>
                 <p className="text-xs">Dental Lab</p>
@@ -40,23 +35,20 @@ function Footer() {
             <p className="text-lg mb-3">{t("footer_address")}</p>
             <a
               href={`mailto:${t("footer_email")}`}
-              className="text-gray-400 hover:text-white mb-3 flex items-center justify-center gap-2"
-            >
+              className="text-gray-400 hover:text-white mb-3 flex items-center justify-center gap-2">
               <FaEnvelope size={20} className="inline-block mr-2" />
               {t("footer_email")}
             </a>
             <div className="flex items-center justify-center gap-6">
               <a
                 href="tel:+201234567890"
-                className="text-gray-400 hover:text-white flex items-center justify-center gap-2"
-              >
+                className="text-gray-400 hover:text-white flex items-center justify-center gap-2">
                 <FaPhoneAlt size={20} />
                 <span dir="ltr">{t("footer_phone1")}</span>
               </a>
               <a
                 href="tel:+201020453469"
-                className="text-gray-400 hover:text-white flex items-center justify-center gap-2"
-              >
+                className="text-gray-400 hover:text-white flex items-center justify-center gap-2">
                 <FaPhoneAlt size={20} />
                 <span dir="ltr">{t("footer_phone2")}</span>
               </a>
@@ -67,8 +59,7 @@ function Footer() {
             <div className="mb-3">
               <a
                 href="https://www.facebook.com/profile.php?id=61569695740756"
-                className="text-gray-400 hover:text-white flex items-center justify-center gap-2"
-              >
+                className="text-gray-400 hover:text-white flex items-center justify-center gap-2">
                 <FaFacebook size={20} />
                 <span>{t("footer_facebook")}</span>
               </a>
@@ -77,8 +68,7 @@ function Footer() {
             <div className="mb-3">
               <a
                 href="https://wa.me/201063254311"
-                className="text-gray-400 hover:text-white flex items-center justify-center gap-2"
-              >
+                className="text-gray-400 hover:text-white flex items-center justify-center gap-2">
                 <FaWhatsapp size={20} />
                 <span>{t("footer_whatsapp")}</span>
               </a>
@@ -87,8 +77,7 @@ function Footer() {
             <div>
               <a
                 href="https://www.tiktok.com/@magic.dental.lab7?_t=ZS-8u0AFeJbjlf&_r=1"
-                className="text-gray-400 hover:text-white flex items-center justify-center gap-2"
-              >
+                className="text-gray-400 hover:text-white flex items-center justify-center gap-2">
                 <FaTiktok size={20} />
                 <span>{t("footer_tiktok")}</span>
               </a>

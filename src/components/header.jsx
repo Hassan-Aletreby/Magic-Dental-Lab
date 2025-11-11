@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import Logo from "../assets/imgs/logo3.jpg";
+import Logo from "../assets/imgs/logo withnot background .png";
 function Header() {
   const { t, i18n } = useTranslation();
   const [scrolling, setScrolling] = useState(false);
@@ -30,13 +30,11 @@ function Header() {
     <header
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
         scrolling ? "bg-black" : "bg-transparent"
-      }`}
-    >
+      }`}>
       <div className="container mx-auto w-[80%] flex items-center justify-between py-2 md:py-1">
         <a
           href="#home"
-          className="basis-1/3 flex items-center justify-start text-white w-full"
-        >
+          className="basis-1/3 flex items-center justify-start text-white w-full">
           <img
             src={Logo}
             alt="logo-img"
@@ -53,40 +51,35 @@ function Header() {
             <li>
               <a
                 href="#home"
-                className="text-white text-[18px] opacity-[0.9] hover:opacity-[1] hover:underline transition-all duration-300"
-              >
+                className="text-white text-[18px] opacity-[0.9] hover:opacity-[1] hover:underline transition-all duration-300">
                 {t("home")}
               </a>
             </li>
             <li>
               <a
                 href="#about"
-                className="text-white text-[18px] opacity-[0.9] hover:opacity-[1] hover:underline transition-all duration-300"
-              >
+                className="text-white text-[18px] opacity-[0.9] hover:opacity-[1] hover:underline transition-all duration-300">
                 {t("about")}
               </a>
             </li>
             <li>
               <a
                 href="#services"
-                className="text-white text-[18px] opacity-[0.9] hover:opacity-[1] hover:underline transition-all duration-300"
-              >
+                className="text-white text-[18px] opacity-[0.9] hover:opacity-[1] hover:underline transition-all duration-300">
                 {t("service")}
               </a>
             </li>
             <li>
               <a
                 href="#location"
-                className="text-white text-[18px] opacity-[0.9] hover:opacity-[1] hover:underline transition-all duration-300"
-              >
+                className="text-white text-[18px] opacity-[0.9] hover:opacity-[1] hover:underline transition-all duration-300">
                 {t("location")}
               </a>
             </li>
             <li>
               <a
                 href="#contact"
-                className="text-white text-[18px] opacity-[0.9] hover:opacity-[1] hover:underline transition-all duration-300"
-              >
+                className="text-white text-[18px] opacity-[0.9] hover:opacity-[1] hover:underline transition-all duration-300">
                 {t("contact")}
               </a>
             </li>
@@ -96,8 +89,7 @@ function Header() {
         <div className="relative">
           <button
             className="text-white px-4 py-2 rounded-md cursor-pointer"
-            onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-          >
+            onClick={() => setIsDropdownOpen(!isDropdownOpen)}>
             {i18n.language === "ar" ? "العربية" : "English"}
           </button>
 
@@ -105,14 +97,12 @@ function Header() {
             <div className="absolute right-0 mt-2 w-32 bg-black text-white rounded-md shadow-lg">
               <button
                 onClick={() => handleLanguageChange("ar")}
-                className="block w-full px-4 py-2 text-right hover:bg-gray-700 cursor-pointer"
-              >
+                className="block w-full px-4 py-2 text-right hover:bg-gray-700 cursor-pointer">
                 العربية
               </button>
               <button
                 onClick={() => handleLanguageChange("en")}
-                className="block w-full px-4 py-2 text-right hover:bg-gray-700 cursor-pointer"
-              >
+                className="block w-full px-4 py-2 text-right hover:bg-gray-700 cursor-pointer">
                 English
               </button>
             </div>
