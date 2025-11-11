@@ -25,17 +25,17 @@ function ContactSection() {
       type: "number",
       placeholder: t("enter_phone"),
     },
-    {
-      key: "email",
-      label: t("email_label"),
-      type: "email",
-      placeholder: t("enter_email"),
-    },
+    // {
+    //   key: "email",
+    //   label: t("email_label"),
+    //   type: "email",
+    //   placeholder: t("enter_email"),
+    // },
   ];
 
   const validationSchema = Yup.object({
     name: Yup.string().required(t("validations.name_required")),
-    // phone: Yup.string()(t("validations.phone_required")),
+    phone: Yup.string().required(t("validations.phone_required")),
     email: Yup.string().email(t("validations.invalid_email")),
     // .required(t("validations.email_required")),
   });
@@ -91,11 +91,11 @@ function ContactSection() {
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="overflow-hidden rounded-2xl">
+          <div className="overflow-hidden rounded-2xl h-full">
             <img
               src={background}
               alt="Contact Image"
-              className="h-full object-contain rounded-2xl w-full"
+              className="h-full w-full object-cover rounded-2xl"
             />
           </div>
 
